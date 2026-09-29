@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #08080A; /* 超暗钛金属黑 */
+  --foreground: #ffffff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@layer components {
+  /* 极致透亮液态面板 (Luminous Liquid Panel) */
+  .liquid-panel-luminous {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+    backdrop-filter: blur(28px) saturate(210%);
+    -webkit-backdrop-filter: blur(28px) saturate(210%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 
+      inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.45),
+      inset 0 -1px 1px 0 rgba(0, 0, 0, 0.25),
+      0 12px 36px -8px rgba(0, 0, 0, 0.5);
+  }
+
+  .liquid-panel-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .liquid-panel-hover:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.06) 100%);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  /* 液态玻璃核心透镜材质 */
+  .liquid-lens {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.06) 60%, rgba(255, 255, 255, 0.02) 100%);
+    backdrop-filter: blur(28px) saturate(240%) brightness(115%);
+    -webkit-backdrop-filter: blur(28px) saturate(240%) brightness(115%);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 
+      inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.75),
+      inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.35),
+      inset 0 0 16px 0 rgba(255, 255, 255, 0.12),
+      0 8px 24px -4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* 液态药丸控件 (Liquid Pill) */
+  .liquid-pill {
+    background-color: rgba(24, 24, 27, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .liquid-pill:active {
+    transform: scale(0.95);
+  }
+
+  .liquid-pill-active {
+    background-color: #ffffff;
+    color: #09090b;
+    font-weight: 500;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 12px rgba(255, 255, 255, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .apple-glass {
+    @apply backdrop-blur-2xl backdrop-saturate-[180%] border border-white/[0.08];
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    box-shadow: 
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.25),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+      0 8px 32px -4px rgba(0, 0, 0, 0.5);
+  }
+
+  .apple-glass-hover {
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  .apple-glass-hover:hover {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+    box-shadow: 
+      inset 0 1px 2px 0 rgba(255, 255, 255, 0.45),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+      0 12px 40px -4px rgba(0, 0, 0, 0.6);
+  }
+}
