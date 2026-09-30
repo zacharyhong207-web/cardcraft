@@ -75,7 +75,7 @@ export default function Navbar() {
   const langStretch = 1.25;
 
   return (
-    <nav className="sticky top-4 z-50 max-w-5xl mx-auto liquid-panel-luminous rounded-[24px] px-4 py-2.5 flex items-center justify-between">
+    <nav className="w-full liquid-panel-luminous rounded-[24px] px-4 py-2.5 flex items-center justify-between shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
       
       {/* Logo */}
       <Link href="/" onClick={(e) => { if (pathname === '/') { e.preventDefault(); const intro = document.getElementById("intro"); if(intro) intro.scrollIntoView({ behavior: "smooth" });; } }} className="flex items-center gap-2 group ml-1">

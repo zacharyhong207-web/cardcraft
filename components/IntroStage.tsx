@@ -121,14 +121,11 @@ export function IntroStage() {
               <div className="w-16 h-12 bg-gradient-to-br from-zinc-300 to-zinc-500 rounded-lg shadow-lg border border-zinc-200/50" />
             </div>
             
-            <div className="absolute bottom-10 right-10 pointer-events-none" style={{ transform: 'translateZ(60px)' }}>
-              <div className="text-white font-bold text-4xl italic drop-shadow-xl opacity-90">VISA</div>
-            </div>
-
-            <div className="absolute bottom-10 left-10 pointer-events-none" style={{ transform: 'translateZ(80px)' }}>
-              <div className="text-white font-mono font-bold text-2xl uppercase tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            <div className="absolute bottom-10 left-10 right-10 flex items-end justify-between gap-3 pointer-events-none" style={{ transform: 'translateZ(70px)' }}>
+              <div className="text-white font-mono font-bold text-xl sm:text-2xl uppercase tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] max-w-[60%] truncate">
                 ZACHARY HONG
               </div>
+              <div className="text-white font-bold text-3xl sm:text-4xl italic drop-shadow-xl opacity-90 shrink-0">VISA</div>
             </div>
           </motion.div>
         </section>

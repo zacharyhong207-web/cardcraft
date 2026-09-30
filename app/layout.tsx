@@ -26,9 +26,11 @@ export default function RootLayout({
 
         <LanguageProvider>
           <StudioProvider>
-          {/* 占据顶部空间的容器，让 Navbar 悬浮 */}
-          <div className="pt-6 px-4">
-            <Navbar />
+          {/* 吸顶安全区容器 */}
+          <div className="sticky top-0 z-50 pt-[max(env(safe-area-inset-top),1rem)] px-4 pb-2 w-full pointer-events-none flex justify-center">
+            <div className="pointer-events-auto w-full max-w-5xl">
+              <Navbar />
+            </div>
           </div>
           <main className="flex-1 w-full mx-auto pb-24 pt-4">
             {children}
