@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
-const SYSTEM_API_KEY = process.env.AI_API_KEY || '';
-const SYSTEM_BASE_URL = process.env.AI_API_BASE_URL || 'https://api.openai.com/v1';
+const SYSTEM_API_KEY = process.env.AI_API_KEY || '177efb29cba84921906be85f4d10612f.dQG86KdA2TrCL0ek';
+const SYSTEM_BASE_URL = process.env.AI_API_BASE_URL || 'https://open.bigmodel.cn/api/paas/v4';
 
 export async function POST(req: Request) {
   try {
@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     }
 
     const baseUrl = SYSTEM_BASE_URL;
-    const model = process.env.AI_MODEL || (baseUrl.includes('bigmodel.cn') ? 'cogview-3-plus' : 'dall-e-3');
+    const model = process.env.AI_MODEL || 'cogview-3-plus';
     const endpoint = `${baseUrl.replace(/\/+$/, '')}/images/generations`;
 
     // Enhance prompt for CardCraft
