@@ -121,17 +121,19 @@ export function IntroStage() {
               <div className="w-16 h-12 bg-gradient-to-br from-zinc-300 to-zinc-500 rounded-lg shadow-lg border border-zinc-200/50" />
             </div>
             
-            <div className="absolute bottom-10 left-10 right-10 flex items-end justify-between gap-3 pointer-events-none" style={{ transform: 'translateZ(70px)' }}>
-              <div className="text-white font-mono font-bold text-xl sm:text-2xl uppercase tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] max-w-[60%] truncate">
+            <div className="absolute left-4 bottom-4 right-4 md:left-8 md:bottom-8 md:right-8 flex items-end justify-between gap-3 pointer-events-none" style={{ transform: 'translateZ(70px)' }}>
+              <div className="text-white font-mono font-bold text-xs md:text-2xl uppercase tracking-[0.1em] md:tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] max-w-[55%] md:max-w-[60%] truncate">
                 ZACHARY HONG
               </div>
-              <div className="text-white font-bold text-3xl sm:text-4xl italic drop-shadow-xl opacity-90 shrink-0">VISA</div>
+              <div className="text-white font-bold text-xl md:text-4xl italic drop-shadow-xl opacity-90 shrink-0">
+                VISA
+              </div>
             </div>
           </motion.div>
         </section>
 
         {/* Narrative Sections */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-32">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 px-2 md:px-0 mb-32">
           {sections.map((sec, idx) => (
             <motion.div
               key={sec.num}
@@ -163,7 +165,7 @@ export function IntroStage() {
           className="flex justify-center"
         >
           <a href="#gallery">
-            <button className="relative group overflow-hidden rounded-full bg-white text-black px-10 py-5 font-medium shadow-[0_0_40px_rgba(255,255,255,0.1)] transition-transform hover:scale-105 active:scale-95">
+            <button className="relative group overflow-hidden rounded-full bg-white text-black px-6 py-4 md:px-10 md:py-5 text-sm md:text-base font-medium shadow-[0_0_40px_rgba(255,255,255,0.1)] transition-transform hover:scale-105 active:scale-95">
               <span className="relative z-10 flex items-center gap-3">
                 <Sparkles className="w-5 h-5" />
                 {t.intro.cta}

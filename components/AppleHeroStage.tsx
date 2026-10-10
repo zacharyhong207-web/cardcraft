@@ -137,18 +137,21 @@ export function AppleHeroStage() {
             {/* 细腻环境漫反射光泽 */}
             <div className="absolute inset-0 bg-gradient-to-tr from-white/15 via-transparent to-black/40 pointer-events-none" />
             
-            {/* 右下角官方银联标 */}
-            <div className="absolute bottom-5 right-5 h-7 w-auto">
-              <img src="/logos/unionpay.svg" className="h-full w-auto drop-shadow-lg" alt="UnionPay" />
-            </div>
-
-            {/* 卡面状态 */}
-            <div className="absolute bottom-5 left-5 pointer-events-none">
-              <div className="text-sm font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                {t.hero.card3Title}
+            {/* 底部状态与徽标弹性布局 */}
+            <div className="absolute bottom-4 left-4 right-4 md:bottom-5 md:left-5 md:right-5 flex justify-between items-end gap-3 pointer-events-none">
+              {/* 卡面状态 */}
+              <div className="flex flex-col truncate max-w-[65%]">
+                <div className="text-xs md:text-sm font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] truncate">
+                  {t.hero.card3Title}
+                </div>
+                <div className="text-[10px] md:text-[11px] text-zinc-300 mt-0.5 tracking-wide drop-shadow truncate">
+                  {t.hero.card3Subtitle}
+                </div>
               </div>
-              <div className="text-[11px] text-zinc-300 mt-0.5 tracking-wide drop-shadow">
-                {t.hero.card3Subtitle}
+
+              {/* 右下角官方银联标 */}
+              <div className="h-5 md:h-7 shrink-0 flex items-end justify-end">
+                <img src="/logos/unionpay.svg" className="h-full w-auto drop-shadow-lg" alt="UnionPay" />
               </div>
             </div>
           </motion.div>
